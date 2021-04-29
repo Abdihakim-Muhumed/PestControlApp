@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/pageTitle"
+        >
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:src="@drawable/app_logo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clean House"
+            android:textSize="35dp"
+            android:textColor="@color/design_default_color_primary"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pageTitle">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/description"
+            android:gravity="start"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:fontFamily="sans-serif"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:text="Contact us Now!"
+            android:background="@color/design_default_color_primary"
+            android:id="@+id/buttonContact"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu"
+        android:background="@color/purple_200"
+        android:id="@+id/bottomNAv"
+        android:visibility="visible"
+        />
+
+
+
+</RelativeLayout>

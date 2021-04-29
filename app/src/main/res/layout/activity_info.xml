@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+
+        android:background="@color/teal_200">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Here is your submission summary"
+            android:textColor="@color/purple_500"
+            android:id="@+id/title"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="24dp"
+                android:text="Name: "
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/occupantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Abdihakim Muhumed Sheikh"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="24dp"
+                android:text="Email "
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/occupantEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Abdihakim Muhumed Sheikh"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="24dp"
+                android:text="Phone : "
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/occupantPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Abdihakim Muhumed Sheikh"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="24dp"
+                android:text="Gender : "
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/occupantGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Abdihakim Muhumed Sheikh"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="24dp"
+                android:text="House No : "
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/occupantHouseNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Abdihakim Muhumed Sheikh"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="24dp"
+                android:text="Pests : "
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/occupantPests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Abdihakim Muhumed Sheikh"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="24dp"
+                android:text="Date of visit : "
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/dateofvisit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Abdihakim Muhumed Sheikh"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Thank you for your contacting CLEAN HOUSE. We will get back to you soonest possible. Have a beautiful day!"
+            android:textColor="@color/purple_500"
+            android:id="@+id/endingQuote"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+</RelativeLayout>
