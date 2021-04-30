@@ -1,8 +1,11 @@
 package com.example.pestcontrolapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Button
 import android.widget.TextView
 
 class Info : AppCompatActivity() {
@@ -13,6 +16,7 @@ class Info : AppCompatActivity() {
     private lateinit var houseNo : TextView
     private lateinit var pests : TextView
     private lateinit var visitingDate : TextView
+    private lateinit var button: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
@@ -35,5 +39,12 @@ class Info : AppCompatActivity() {
         houseNo.text = intent.getStringExtra("House No. :")
         pests.text = intent.getStringExtra("Pest to control : ")
         visitingDate.text = intent.getStringExtra("Date of visit :")
+
+        //
+        button =findViewById(R.id.buttonDone)
+        button.setOnClickListener(View.OnClickListener {
+            val intentHome = Intent(this,MainActivity::class.java)
+            startActivity(intentHome)
+        })
     }
 }

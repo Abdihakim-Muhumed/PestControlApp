@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:src="@drawable/cockroach"
+        android:id="@+id/serviceImage"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:text="Cockroach COntrol"
+        android:id="@+id/serviceTitle"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cockroach"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:id="@+id/serviceDescription"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/phone_dial_icon"
+            android:text="Call Now"
+            android:id="@+id/buttonDial"/>
+        <Button
+            android:id="@+id/buttonEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/icon_email"
+            android:text="Send Email"/>
+    </LinearLayout>
+
+
+</LinearLayout>
