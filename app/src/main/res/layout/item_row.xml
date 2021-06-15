@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/purple_200">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/b_id"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Booking id :"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/b_id" />
+            <TextView
+                android:id="@+id/b_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/b_name"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:text="Name  :"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/b_name" />
+        <TextView
+            android:id="@+id/b_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/b_email"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Email  :"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/b_email" />
+            <TextView
+                android:id="@+id/b_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/b_phone"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Phone  :"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/b_phone" />
+            <TextView
+                android:id="@+id/b_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/b_gender"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Gender  :"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/b_gender" />
+            <TextView
+                android:id="@+id/b_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/b_houseNo"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="House no.  :"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/b_houseNo" />
+            <TextView
+                android:id="@+id/b_houseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/b_pests"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Pests  :"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/b_pests" />
+            <TextView
+                android:id="@+id/b_pests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/b_date"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Name  :"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/b_date" />
+            <TextView
+                android:id="@+id/b_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="DELETE"
+                android:id="@+id/btnDelete"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="UPDATE"
+                android:id="@+id/btnUpdated"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSe
                 val intentAdvert = Intent(this,Advert::class.java)
                 startActivity(intentAdvert)
             }
+            R.id.myBookingsMenu->{
+                val intenBookings = Intent(this,MyBookings::class.java)
+                startActivity(intenBookings)
+            }
         }
         return true
     }

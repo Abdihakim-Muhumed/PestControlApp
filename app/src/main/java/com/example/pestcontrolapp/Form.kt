@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class Form : AppCompatActivity() {
     private  lateinit var  submitButton: Button
@@ -25,7 +26,6 @@ class Form : AppCompatActivity() {
     private lateinit var houseNo  : String
     private lateinit var pests  : String
     private lateinit var dateOfVisit  : String
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form)
@@ -48,15 +48,32 @@ class Form : AppCompatActivity() {
             pests = occupantPests.text.toString()
             dateOfVisit = inputDateOfVisit.text.toString()
 
-            val intentInfo = Intent(this@Form,Info::class.java)
-            intentInfo.putExtra("Name :",name)
-            intentInfo.putExtra("Email:",email)
-            intentInfo.putExtra("Phone : ",phone)
-            intentInfo.putExtra("Gender :",gender)
-            intentInfo.putExtra("House No. :",houseNo)
-            intentInfo.putExtra("Pest to control : ",pests)
-            intentInfo.putExtra("Date of visit :",dateOfVisit)
-            startActivity(intentInfo)
+            val id = (0..1000).random()
+            val databaseHandler: DatabaseHandler = DatabaseHandler(this)
+            if(name.trim()!="" && phone.trim()!="" && email.trim()!="" && gender.trim()!="" && houseNo.trim()!="" && pests.trim()!="" && dateOfVisit.trim()!="" ) {
+                val status = databaseHandler.addBookings(BookingsModel(id,name,gender,phone,email,houseNo,pests,dateOfVisit))
+                if (status > -1) {
+                    Toast.makeText(applicationContext, "Record saved", Toast.LENGTH_LONG).show()
+                    //info details
+                    val intentInfo = Intent(this@Form,Info::class.java)
+                    intentInfo.putExtra("Name :",name)
+                    intentInfo.putExtra("Email:",email)
+                    intentInfo.putExtra("Phone : ",phone)
+                    intentInfo.putExtra("Gender :",gender)
+                    intentInfo.putExtra("House No. :",houseNo)
+                    intentInfo.putExtra("Pest to control : ",pests)
+                    intentInfo.putExtra("Date of visit :",dateOfVisit)
+                    startActivity(intentInfo)
+                }
+            }else {
+                Toast.makeText(
+                        applicationContext,
+                        "Fill all the fields!!!",
+                        Toast.LENGTH_LONG
+                ).show()
+
+            }
+
         })
 
     }

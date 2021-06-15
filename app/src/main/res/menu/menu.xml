@@ -17,5 +17,11 @@
         android:icon="@drawable/icon_contact_form"
         android:visible="true"
         />
+    <item
+        android:id="@+id/myBookingsMenu"
+        android:title="My Bookings"
+        android:icon="@drawable/icon_booking"
+        android:visible="true"
+        />
 
 </menu>

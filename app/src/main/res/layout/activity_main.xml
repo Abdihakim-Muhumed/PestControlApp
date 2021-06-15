@@ -16,10 +16,10 @@
         >
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
-            android:src="@drawable/app_logo" />
+            android:src="@drawable/pest_logo" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,6 +64,7 @@
         android:background="@color/purple_200"
         android:id="@+id/bottomNAv"
         android:visibility="visible"
+        app:labelVisibilityMode="labeled"
         />
 
 
