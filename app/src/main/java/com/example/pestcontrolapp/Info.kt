@@ -1,6 +1,8 @@
 package com.example.pestcontrolapp
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +22,8 @@ class Info : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
+        val sharedPreferences: SharedPreferences = getSharedPreferences("sharedpreference",Context.MODE_PRIVATE)
+
         //view identification
         name = findViewById(R.id.occupantName)
         email = findViewById(R.id.occupantEmail)
@@ -30,17 +34,18 @@ class Info : AppCompatActivity() {
         visitingDate = findViewById(R.id.dateofvisit)
 
         //setting strings from intent
-        val occupantName : String? = intent.getStringExtra("Name :")
+        val occupantName : String? = sharedPreferences.getString("key_name","")
         Log.d("sharing received " ,"Received "+ occupantName)
         name.text = occupantName
-        email.text = intent.getStringExtra("Email:")
-        phone.text = intent.getStringExtra("Phone : ")
-        gender.text = intent.getStringExtra("Gender :")
-        houseNo.text = intent.getStringExtra("House No. :")
-        pests.text = intent.getStringExtra("Pest to control : ")
-        visitingDate.text = intent.getStringExtra("Date of visit :")
+        email.text = sharedPreferences.getString("key_email","")
+        phone.text = sharedPreferences.getString("key_phone","")
+        gender.text = sharedPreferences.getString("key_gender","")
+        houseNo.text = sharedPreferences.getString("key_houseNo","")
+        pests.text = sharedPreferences.getString("key_pests","")
+        visitingDate.text = sharedPreferences.getString("key_date","")
 
-        //
+        //getting data from shared pref
+
         button =findViewById(R.id.buttonDone)
         button.setOnClickListener(View.OnClickListener {
             val intentHome = Intent(this,MainActivity::class.java)

@@ -1,6 +1,8 @@
 package com.example.pestcontrolapp
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +12,9 @@ import android.widget.EditText
 import android.widget.Toast
 
 class Form : AppCompatActivity() {
+
+    private val sharedPrefFile = "sharedpreference"
+
     private  lateinit var  submitButton: Button
     private lateinit var  occupantName:EditText
     private lateinit var  occupantGender:EditText
@@ -39,6 +44,8 @@ class Form : AppCompatActivity() {
         occupantPhone = findViewById(R.id.phone)
         inputDateOfVisit = findViewById(R.id.dateOfVisit)
 
+        //storing data into shared preferences
+        val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile,Context.MODE_PRIVATE)
         submitButton.setOnClickListener(View.OnClickListener {
             name = occupantName.text.toString()
             email = occupantEmail.text.toString()
@@ -47,6 +54,17 @@ class Form : AppCompatActivity() {
             houseNo = occupantHouseNo.text.toString()
             pests = occupantPests.text.toString()
             dateOfVisit = inputDateOfVisit.text.toString()
+
+            val editor:SharedPreferences.Editor = sharedPreferences.edit()
+            editor.putString("key_name",name)
+            editor.putString("key_email",email)
+            editor.putString("key_phone",phone)
+            editor.putString("key_gender",gender)
+            editor.putString("key_houseNo",houseNo)
+            editor.putString("key_pests",pests)
+            editor.putString("key_date",dateOfVisit)
+            editor.apply()
+            editor.commit()
 
             val id = (0..1000).random()
             val databaseHandler: DatabaseHandler = DatabaseHandler(this)
